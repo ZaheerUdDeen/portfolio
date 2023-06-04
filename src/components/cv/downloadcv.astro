@@ -1,0 +1,27 @@
+---
+const { domId } = Astro.props;
+---
+
+<button id="downloadButton">Download PDF</button>
+
+<script>import jsPDF from "jspdf";
+
+    const downloadButton = document.querySelector("#downloadButton");
+    const domId = Astro.props.domId; // This line gets domId from Astro props
+
+    if(downloadButton) {
+    downloadButton.addEventListener('click', () => {
+        const pdf = new jsPDF();
+        const divElement = document.querySelector(`#${domId}`) as HTMLElement;
+
+        if (divElement) {
+            pdf.html(divElement, {
+            callback: (pdf) => {
+                pdf.save("resume.pdf");
+            }
+        });
+        }
+        
+    });
+}
+</script>

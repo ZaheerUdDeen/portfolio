@@ -1,5 +1,5 @@
 ---
-const { title, companyName, companyLink, style, fromDate, toDate } = Astro.props;
+const { title, companyName, companyDescription,companyLink, style, fromDate, toDate } = Astro.props;
 ---
 
 <div class="flex">
@@ -8,10 +8,10 @@ const { title, companyName, companyLink, style, fromDate, toDate } = Astro.props
     <span class="education__line bg-primary block h-full w-[2px] translate-x-[7px]"></span>
   </div>
   <div class="experience__data bd-grid px-5">
-    <h3 class="font-semibold mb-1">{title} @ <a href={companyLink} class="font-bold mb-3" style={style}>{companyName}</a></h3>
-    <h2 class="font-semibold mb-1"></h2>
+    <h3 class="font-bold mb-2">{title} @ <a href={companyLink} class="font-bold mb-3" style={style}>{companyName}</a></h3>
+    <h5 class="font-light mb-1">{companyDescription}</h5>
     <span class="font-light text-sm">From: {fromDate}</span>
-    <span class="font-light text-sm">- {toDate}</span>
-    <p class="my-2 text-justify"> <slot /> </p>
+    <span class="font-light text-sm"> - <b> {toDate}</b></span>
+    <p class="my-2 text-justify"> <slot/> </p>
   </div>
 </div>
