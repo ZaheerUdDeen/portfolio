@@ -1,0 +1,18 @@
+---
+const { name, link, style, subSkills } = Astro.props;
+---
+<li class={style}>
+    <a href={link} target="_blank" class="hover:underline">{name}</a>
+    {subSkills && subSkills.length ? 
+        <span>
+          (
+          {subSkills.map((subSkill, index) => (
+            <>
+              <a href={subSkill.link} target="_blank" class={`${subSkill.style} hover:underline`}>{subSkill.name}</a>
+              {index < subSkills.length - 1 ? ', ' : ''}
+            </>
+          ))}
+          )
+        </span>
+      : null}
+  </li>

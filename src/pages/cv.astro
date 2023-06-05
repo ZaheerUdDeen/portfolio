@@ -4,6 +4,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 import Jobtitle from "../components/cv/Jobtitle.astro";
 // import DownloadCV from '../components/cv/downloadcv.astro';
 import DownloadCV from "../components/cv/DownloadResume";
+import Skill from "../components/cv/Skill.astro";
 ---
 
 <BaseLayout title="Resume">
@@ -13,169 +14,171 @@ import DownloadCV from "../components/cv/DownloadResume";
     </DownloadCV>
   </div> -->
 
-    <div >
-      <div class="mb-4">
-        <div class="text-3xl w-full font-bold">Profile</div>
-      </div>
-      <div class="mb-10 text-justify">
-        A versatile Software Engineer with over five years of experience in
-        designing and implementing complex systems. Specializes in developing
-        Middleware systems, RESTful web services, and ETL pipelines using
-        technologies such as Spring Boot, Node-ts, and AWS services. Proven
-        track record delivering successful projects. Passionate about using
-        technical skills to drive business success.
-      </div>
+  <div>
+    <div class="mb-4">
+      <div class="text-3xl w-full font-bold">Profile</div>
+    </div>
+    <div class="mb-10 text-justify">
+      A versatile Software Engineer with over five years of experience in
+      designing and implementing complex systems. Specializes in developing
+      Middleware systems, RESTful web services, and ETL pipelines using
+      technologies such as Spring Boot, Node-ts, and AWS services. Proven track
+      record delivering successful projects. Passionate about using technical
+      skills to drive business success.
+    </div>
 
-      <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Experience</div>
-      </div>
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Experience</div>
+    </div>
 
-      <div class="time-line-container mb-10">
-        <Jobtitle
-          title="Sr Software Engineer"
-          companyDescription="Global Rescue provides medical, security, intelligence, and crisis response services to corporations, governments and individuals"
-          companyName="Global Rescue"
-          companyLink="https://www.globalrescue.com/"
-          style="color: red; text-decoration: none; border-bottom: 2px solid red;"
-          fromDate="March/01/2022"
-          toDate="Present"
-        >
-          <ul class="list-disc md:columns-1 columns-2 mx-6">
-            <li class="mb-1">
-              Led the revamp of a legacy enterprise system (GRID) into a
-              microservices architecture using Spring Boot, enhancing system
-              efficiency and stability.
-            </li>
-            <li class="mb-1">
-              Directed and completed 4 key microservices, playing a pivotal role
-              in the overall project's success.
-            </li>
-            <li class="mb-1">
-              Developed the 'Reference Data' microservice to manage essential
-              data (addresses, cities, states, countries), including
-              implementing real-time data update capabilities across services
-              using RabbitMQ.
-            </li>
-            <li class="mb-1">
-              Created the 'Intel Service', a core system for maintaining events
-              and generating destination reports, boosting analytical
-              capabilities and service responsiveness..
-            </li>
-            <li class="mb-1">
-              Implemented OAuth 2.0 security layer in the 'Account Service'
-              microservice using Keycloak as an Identity Provider (IDP).
-              Customized SPIs for email generation, legacy user support, and
-              runtime JWT token claim management.
-            </li>
-            <li>
-              Assisted the DevOps team in developing AWS API Gateway, write
-              authentication lambdas for Keycloak, thereby bolstering service
-              security.
-            </li>
-            <li class="mb-1">
-              Crafted middleware 'Comm Service' for seamless integration of two
-              mobile applications with the new system, ensuring continued
-              service availability during system transition.
-            </li>
-            <li class="mb-1">
-              Contributed significantly to an increase in customer renewals
-              post-beta release due to system improvements, garnering high
-              satisfaction ratings from both internal departments and enterprise
-              clients.
-            </li>
-          </ul>
-        </Jobtitle>
-        <Jobtitle
-          title="Software Engineer"
-          companyName="Stella Technologies"
-          companyDescription="Stella Technology, based in Silicon Valley, is a leading digital healthcare-only company."
-          companyLink="https://stellatechnology.com/"
-          style="color: #11adb3; text-decoration: none; border-bottom: 2px solid #11adb3;"
-          fromDate="March/01/2021"
-          toDate=" April/01/2022"
-        >
-          <ul class="list-disc md:columns-1 columns-2 mx-6">
-            <li class="mb-1">
-              Played a key role in the IQG project aimed at enhancing healthcare
-              interoperability using the HAPI FHIR standard. Contributed to the
-              project by developing a dynamic logging module using Spring Boot
-              Actuator and a mapping library for transforming SQL-based client
-              data to HAPI FHIR specifications.
-            </li>
-            <li class="mb-1">
-              Transitioned to the Inbox Health project, focused on healthcare
-              billing solutions for diverse organizations. Main responsibilities
-              included the development of a data pipeline for parsing,
-              transforming, and loading organization-specific customer data into
-              a standardized format for seamless billing operations.
-            </li>
-            <li class="mb-1">
-              Implemented an AWS Lambda function with DynamoDB and a serverless
-              function in TypeScript for CSV parsing, thereby enabling efficient
-              file uploads, data parsing, and loading to SQL databases using
-              Sequelize.
-            </li>
-          </ul>
-        </Jobtitle>
-        <Jobtitle
-          title="Software Engineer"
-          companyName="China Mobile Pakistan - Zong 4G"
-          companyDescription="Zong is a subsidiary of China Mobile in Pakistan & a leading telecome company with largest share of subscriber based in Pakistan."
-          companyLink="https://www.zong.com.pk/about-zong/china-mobile-pakistan/"
-          style="color: #8cc63e; text-decoration: none; border-bottom: 2px solid #8cc63e;"
-          fromDate="March/01/2021"
-          toDate=" April/01/2022"
-        >
-          <ul class="list-disc md:columns-1 columns-2 mx-6">
-            <li class="mb-1">
-              Bridged the gap between IT and business departments to manage user
-              requirements and software modifications in the BOSS system.
-            </li>
-            <li class="mb-1">
-              Coordinated with a China-based vendor for the accurate translation
-              and implementation of technical requirements.
-            </li>
-            <li class="mb-1">
-              Led the Change Approval Board (CAB) process, including workload
-              documentation, feedback integration, and timeline setting.
-            </li>
-            <li class="mb-1">
-              Managed the testing, demonstration, and User Acceptance Testing
-              (UAT) processes for new features, leading to production
-              deployment.
-            </li>
-            <li class="mb-1">
-              Delivered key projects such as the Autokiosk Machine and
-              enhancements in the Zong Mobile App and BOSS system.
-            </li>
-          </ul>
-        </Jobtitle>
+    <div class="time-line-container mb-10">
+      <Jobtitle
+        title="Sr Software Engineer"
+        companyDescription="Global Rescue provides medical, security, intelligence, and crisis response services to corporations, governments and individuals"
+        companyName="Global Rescue"
+        companyLink="https://www.globalrescue.com/"
+        style="color: #722F37; text-decoration: none; border-bottom: 2px solid #722F37;"
+        fromDate="March/01/2022"
+        toDate="Present"
+      >
+        <ul class="list-disc md:columns-1 columns-2 mx-6">
+          <li class="mb-1 text-justify">
+            Led the revamp of a legacy enterprise system (GRID) into a
+            microservices architecture using Spring Boot, enhancing system
+            efficiency and stability.
+          </li>
+          <li class="mb-1 text-justify">
+            Directed and completed 4 key microservices, playing a pivotal role
+            in the overall project's success.
+          </li>
+          <li class="mb-1 text-justify">
+            Developed the 'Reference Data' microservice to manage essential data
+            (addresses, cities, states, countries), including implementing
+            real-time data update capabilities across services using RabbitMQ.
+          </li>
+          <li class="mb-1 text-justify">
+            Created the 'Intel Service', a core system for maintaining events
+            and generating destination reports, boosting analytical capabilities
+            and service responsiveness..
+          </li>
+          <li class="mb-1 text-justify">
+            Implemented OAuth 2.0 security layer in the 'Account Service'
+            microservice using Keycloak as an Identity Provider (IDP).
+            Customized SPIs for email generation, legacy user support, and
+            runtime JWT token claim management.
+          </li>
+          <li class="mb-1 text-justify">
+            Assisted the DevOps team in developing AWS API Gateway, write
+            authentication lambdas for Keycloak, thereby bolstering service
+            security.
+          </li>
+          <li class="mb-1 text-justify">
+            Crafted middleware 'Comm Service' for seamless integration of two
+            mobile applications with the new system, ensuring continued service
+            availability during system transition.
+          </li>
+          <li class="mb-1 text-justify">
+            Contributed significantly to an increase in customer renewals
+            post-beta release due to system improvements, garnering high
+            satisfaction ratings from both internal departments and enterprise
+            clients.
+          </li>
+        </ul>
+      </Jobtitle>
+      <Jobtitle
+        title="Software Engineer"
+        companyName="Stella Technologies"
+        companyDescription="Stella Technology, based in Silicon Valley, is a leading digital healthcare-only company."
+        companyLink="https://stellatechnology.com/"
+        style="color: #287c6e; text-decoration: none; border-bottom: 2px solid #287c6e;"
+        fromDate="March/01/2021"
+        toDate=" April/01/2022"
+      >
+        <ul class="list-disc md:columns-1 columns-2 mx-6">
+          <li class="mb-1 text-justify">
+            Played a key role in the IQG project aimed at enhancing healthcare
+            interoperability using the HAPI FHIR standard. Contributed to the
+            project by developing a dynamic logging module using Spring Boot
+            Actuator and a mapping library for transforming SQL-based client
+            data to HAPI FHIR specifications.
+          </li>
+          <li class="mb-1 text-justify">
+            Transitioned to the Inbox Health project, focused on healthcare
+            billing solutions for diverse organizations. Main responsibilities
+            included the development of a data pipeline for parsing,
+            transforming, and loading organization-specific customer data into a
+            standardized format for seamless billing operations.
+          </li>
+          <li class="mb-1 text-justify">
+            Implemented an AWS Lambda function with DynamoDB and a serverless
+            function in TypeScript for CSV parsing, thereby enabling efficient
+            file uploads, data parsing, and loading to SQL databases using
+            Sequelize.
+          </li>
+        </ul>
+      </Jobtitle>
+      <Jobtitle
+        title="Software Engineer"
+        companyName="China Mobile Pakistan - Zong 4G"
+        companyDescription="Zong is a subsidiary of China Mobile in Pakistan & a leading telecome company with largest share of subscriber based in Pakistan."
+        companyLink="https://www.zong.com.pk/about-zong/china-mobile-pakistan/"
+        style="color: #567d30; text-decoration: none; border-bottom: 2px solid #567d30;"
+        fromDate="April/01/2020"
+        toDate=" March/01/2021"
+      >
+        <ul class="list-disc md:columns-1 columns-2 mx-6">
+          <li class="mb-1 text-justify">
+            Bridged the gap between IT and business departments to manage user
+            requirements and software modifications in the BOSS system.
+          </li>
+          <li class="mb-1 text-justify">
+            Coordinated with a China-based vendor for the accurate translation
+            and implementation of technical requirements.
+          </li>
+          <li class="mb-1 text-justify">
+            Led the Change Approval Board (CAB) process, including workload
+            documentation, feedback integration, and timeline setting.
+          </li>
+          <li class="mb-1 text-justify">
+            Managed the testing, demonstration, and User Acceptance Testing
+            (UAT) processes for new features, leading to production deployment.
+          </li>
+          <li class="mb-1 text-justify">
+            Delivered key projects such as the Autokiosk Machine and
+            enhancements in the Zong Mobile App and BOSS system.
+          </li>
+        </ul>
+      </Jobtitle>
 
-        <Jobtitle
-          title="Software Engineer"
-          companyName="Taj Digital Healthcare"
-          companyDescription="TAJ is a digital healthcare service available instantly, smart & personalised with a user experience that appeals to everyone and distributed efficiently with great customer services"
-          companyLink="https://www.tajdigitalhealth.com/"
-          style="color: rgb(74,234,220); text-decoration: none; border-bottom: 2px solid rgb(74,234,220);"
-          fromDate="March/01/2021"
-          toDate=" April/01/2022"
-        >
-          <ul class="list-disc md:columns-1 columns-2 mx-6">
-            <li class="mb-1">
-              Contributed significantly to development of the product from MVP to full operation within a year, contributing to a significant increase in the company's digital healthcare services.
-            </li>
-            <li class="mb-1">
-              Developed a unique reference marketing feature, resulting in 10,000 downloads upon the first release.
-            </li>
-            <li class="mb-1">
-              Integrated various components such as insurance companies, pharmacies, and labs for online medicine and lab tests, improving overall customer experience and convenience.
-            </li>
-          
-          </ul>
-        </Jobtitle>
-      </div>
+      <Jobtitle
+        title="Software Engineer"
+        companyName="Taj Digital Healthcare"
+        companyDescription="TAJ is a digital healthcare service available instantly, smart & personalised with a user experience that appeals to everyone and distributed efficiently with great customer services"
+        companyLink="https://www.tajdigitalhealth.com/"
+        style="color: #2a8988; text-decoration: none; border-bottom: 2px solid #2a8988;"
+        fromDate="March/01/2021"
+        toDate=" April/01/2022"
+      >
+        <ul class="list-disc md:columns-1 columns-2 mx-6">
+          <li class="mb-1 text-justify">
+            Contributed significantly to development of the product from MVP to
+            full operation within a year, contributing to a significant increase
+            in the company's digital healthcare services.
+          </li>
+          <li class="mb-1 text-justify">
+            Developed a unique reference marketing feature, resulting in 10,000
+            downloads upon the first release.
+          </li>
+          <li class="mb-1 text-justify">
+            Integrated various components such as insurance companies,
+            pharmacies, and labs for online medicine and lab tests, improving
+            overall customer experience and convenience.
+          </li>
+        </ul>
+      </Jobtitle>
+    </div>
 
-      <!-- <div class="mb-5">
+    <!-- <div class="mb-5">
         <div class="text-3xl w-full font-bold">Certifications</div>
       </div>
 
@@ -188,12 +191,82 @@ import DownloadCV from "../components/cv/DownloadResume";
         </li>
       </ul> -->
 
-      <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Skills</div>
-      </div>
+    <div class="mb-5 grid md:grid-cols-2">
+      <div>
+        <div class="text-3xl w-full font-bold">Technical Skills</div>
+        <ul class="list-disc mx-6">
+          <!-- Your skills here -->
+          <Skill
+            name="Springboot"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+          />
+          <Skill
+            name="Node-ts"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+          />
 
-      <div class="mb-5">
-        <ul class="list-disc md:columns-5 columns-2 mx-6">
+          <Skill
+            name="AWS"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+            subSkills={[
+              { name: "S3", link: "https://aws.amazon.com/s3/" },
+              { name: "Lambda", link: "https://aws.amazon.com/lambda/" },
+              { name: "DynamoDB", link: "https://aws.amazon.com/dynamodb/" },
+            ]}
+          />
+
+          <Skill
+            name="Rabbit-MQ"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+          />
+
+          <Skill
+            name="Elastic Search"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+          />
+          <Skill
+            name="Databases"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+            subSkills={[
+              { name: "Mysql", link: "https://aws.amazon.com/s3/" },
+              { name: "Postgress", link: "https://aws.amazon.com/lambda/" },
+              { name: "MongoDB", link: "https://aws.amazon.com/dynamodb/" },
+            ]}
+          />
+        </ul>
+      </div>
+      <div>
+        <div class="text-3xl w-full font-bold">Soft Skills</div>
+        <Skill
+          name="Project Mangement"
+          style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+        />
+
+        <Skill
+          name="Scrum Planing"
+          style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+        />
+
+        <Skill
+          name="Canbin planing"
+          style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+        />
+
+        <Skill
+        name="Business Coordination & Collabrations."
+        style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+      />
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <!-- <ul class="list-disc md:columns-5 columns-2 mx-6">
           <li>Springboot</li>
           <li>Node-ts</li>
           <li>AWS(API Gateway, RDS, Serverless, Event Bridge, S3) </li>
@@ -202,30 +275,29 @@ import DownloadCV from "../components/cv/DownloadResume";
           <li>Apache (Kafka, Spark)</li>
           <li>SQL(MySql,Postgres)</li>
           <li>NoSql(MongoDb, Cloudant)</li>
-          <!-- <li>Skill Name</li>
+           <li>Skill Name</li>
           <li>Skill Name</li>
           <li>Skill Name</li>
           <li>Skill Name</li>
           <li>Skill Name</li>
           <li>Skill Name</li>
-          <li>Skill Name</li> -->
-        </ul>
-      </div>
+          <li>Skill Name</li> 
+        </ul>  -->
+    </div>
 
-      <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Education</div>
-      </div>
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Education</div>
+    </div>
 
-      <div class="time-line-container grid gap-4 mb-10">
-        <TimeLineElement
-          title="Bacheler of Software Engineering"
-          subtitle="2014 to 2018 at Bahria Unversity , Islamabad, Pakistan"
-        />
-        <TimeLineElement
-          title="Entreprenuership & Innovation"
-          subtitle="2020 to 2021 at Virtual, University, Pakistan"
-        />
-      </div>
+    <div class="time-line-container grid gap-4 mb-10">
+      <TimeLineElement
+        title="Bachelor of Software Engineering"
+        subtitle="2014 to 2018 at Bahria Unversity , Islamabad, Pakistan"
+      />
+      <TimeLineElement
+        title="Entreprenuership & Innovation"
+        subtitle="2020 to 2021 at Virtual, University, Pakistan"
+      />
     </div>
   </div>
 </BaseLayout>

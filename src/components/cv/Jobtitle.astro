@@ -9,7 +9,7 @@ const { title, companyName, companyDescription,companyLink, style, fromDate, toD
   </div>
   <div class="experience__data bd-grid px-5">
     <h3 class="font-bold mb-2">{title} @ <a href={companyLink} class="font-bold mb-3" style={style}>{companyName}</a></h3>
-    <h5 class="font-light mb-1">{companyDescription}</h5>
+    <h5 class="font-light mb-1 text-justify">{companyDescription}</h5>
     <span class="font-light text-sm">From: {fromDate}</span>
     <span class="font-light text-sm"> - <b> {toDate}</b></span>
     <p class="my-2 text-justify"> <slot/> </p>
