@@ -5,18 +5,23 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
 // import DownloadCV from '../components/cv/downloadcv.astro';
 import DownloadCV from "../components/cv/DownloadResume";
 import Skill from "../components/cv/Skill.astro";
+
 ---
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 <BaseLayout title="Resume">
   <!-- <div class="mb-3">
-    <DownloadCV client:load pagePath="http://localhost:3000/portfolio/cv">
-
-    </DownloadCV>
+    <a href="/public/resume.pdf" download id="downloadButton">
+      <span style="font-size: 1.2em; cursor: pointer;">⬇</span>
+    </a>
   </div> -->
 
   <div>
-    <div class="mb-4">
-      <div class="text-3xl w-full font-bold">Profile</div>
+    <div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
+      <div class="text-3xl font-bold">Profile</div>
+      <a href="/public/resume.pdf" download id="downloadButton">
+        <i class="fas fa-download" style="font-size: 1.2em; cursor: pointer;"></i>
+      </a>
     </div>
     <div class="mb-10 text-justify">
       A versatile Software Engineer with over five years of experience in
