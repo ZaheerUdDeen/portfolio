@@ -1,6 +1,6 @@
 ---
 title: "Resilient Modular Library"
-description: "Unlocking Reliable Communication Between Microservices: A Deep Dive into Fault Tolerance, Outbox Pattern, using Cross-Cutting Implementations."
+description: "Part-1: Unlocking Reliable Communication Between Microservices: A Deep Dive into Fault Tolerance, Outbox Pattern, using Cross-Cutting Implementations."
 pubDate: "Sep 12 2022"
 heroImage: "/blog1.png"
 badge: "Microservice Design Pattern"
