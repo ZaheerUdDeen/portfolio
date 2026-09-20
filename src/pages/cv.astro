@@ -2,43 +2,34 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 import Jobtitle from "../components/cv/Jobtitle.astro";
-// import DownloadCV from '../components/cv/downloadcv.astro';
-import DownloadCV from "../components/cv/DownloadResume";
-import Skill from "../components/cv/Skill.astro";
-
 ---
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
 <BaseLayout title="Resume">
-  <!-- <div class="mb-3">
-    <a href="/public/resume.pdf" download id="downloadButton">
-      <span style="font-size: 1.2em; cursor: pointer;">⬇</span>
-    </a>
-  </div> -->
-
-  <div>
-    <div class="mb-6 text-center">
-      <div class="text-4xl font-bold">Zaheer Ud Din</div>
-      <div class="text-xl opacity-80 mt-1">Staff Consultant Engineer</div>
-      <div class="text-sm opacity-70 mt-2">
+  <div class="bg-white text-gray-900 font-serif shadow-xl rounded-md mx-auto max-w-[850px] p-6 sm:p-10">
+    <div class="text-center mb-4">
+      <div class="text-3xl font-bold">Zaheer Ud Din</div>
+      <div class="text-lg text-gray-700">Staff Consultant Engineer</div>
+      <div class="text-sm text-gray-600 mt-1">
         +92-311-5076756 &nbsp;|&nbsp; zaheeru7@gmail.com &nbsp;|&nbsp; Islamabad, Pakistan
       </div>
       <div class="text-sm mt-1">
-        <a href="https://linkedin.com/in/zaheeru7" target="_blank" class="hover:underline">linkedin.com/in/zaheeru7</a>
+        <a href="https://linkedin.com/in/zaheeru7" target="_blank" class="text-blue-700 hover:underline">linkedin.com/in/zaheeru7</a>
         &nbsp;|&nbsp;
-        <a href="https://github.com/zaheeruddeen" target="_blank" class="hover:underline">github.com/zaheeruddeen</a>
+        <a href="https://github.com/zaheeruddeen" target="_blank" class="text-blue-700 hover:underline">github.com/zaheeruddeen</a>
         &nbsp;|&nbsp;
-        <a href="https://zaheeruddeen.github.io/portfolio" target="_blank" class="hover:underline">zaheeruddeen.github.io/portfolio</a>
+        <a href="https://zaheeruddeen.github.io/portfolio" target="_blank" class="text-blue-700 hover:underline">zaheeruddeen.github.io/portfolio</a>
       </div>
     </div>
+    <hr class="border-gray-400 mb-5" />
 
-    <div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="text-3xl font-bold">Professional Summary</div>
-      <a href="https://raw.githubusercontent.com/ZaheerUdDeen/portfolio/main/public/resume.pdf" download id="downloadButton">
-        <i class="fas fa-download" style="font-size: 1.2em; cursor: pointer;"></i>
+    <div class="mb-1 flex items-center justify-between">
+      <div class="text-lg font-bold uppercase tracking-wide">Professional Summary</div>
+      <a href="https://raw.githubusercontent.com/ZaheerUdDeen/portfolio/main/public/resume.pdf" download id="downloadButton" title="Download PDF" class="text-gray-500 hover:text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/></svg>
       </a>
     </div>
-    <div class="mb-10 text-justify">
+    <hr class="border-gray-400 mb-3" />
+    <div class="text-sm text-justify mb-6">
       I'm the engineer teams bring in when the system that "works fine" starts cracking under real use.
       I'm also who they call when the monolith everyone's afraid to touch needs to become something the
       business can actually grow on. I've spent 8+ years doing exactly that. Most recently, I've been
@@ -49,91 +40,47 @@ import Skill from "../components/cv/Skill.astro";
       depending on, and make sure the engineers around me are shipping better too.
     </div>
 
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Core Competencies</div>
-    </div>
+    <div class="text-lg font-bold uppercase tracking-wide">Core Competencies</div>
+    <hr class="border-gray-400 mb-3" />
+    <ul class="list-disc mx-5 text-sm space-y-1 mb-6">
+      <li>
+        <span class="font-bold">Languages, Frameworks & Frontend:</span>
+        Java 8/17/21, Spring Boot, Micronaut, React 19, Angular Micro-Frontends
+      </li>
+      <li>
+        <span class="font-bold">Cloud, Containers & CI/CD:</span>
+        AWS (Lambda, ECS/Fargate, RDS, S3, KMS), Docker, Kubernetes, Jenkins, CI/CD Automation
+      </li>
+      <li>
+        <span class="font-bold">Data & Messaging:</span>
+        Oracle, PostgreSQL, MySQL, DynamoDB, Kafka, RabbitMQ, SQS/SNS
+      </li>
+      <li>
+        <span class="font-bold">Architecture & Security:</span>
+        Event-Driven & Serverless Architecture, OAuth 2.0, OIDC/SAML, Keycloak
+      </li>
+      <li>
+        <span class="font-bold">Testing, Observability & Practices:</span>
+        JUnit 5, Mockito, TestContainers, Datadog, Splunk Cloud, Agile/Scrum, Kanban, Sprint Planning
+      </li>
+    </ul>
 
-    <div class="mb-10 grid md:grid-cols-2 gap-x-6">
-      <div>
-        <div class="text-2xl w-full font-bold mb-1">Languages, Frameworks & Frontend</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill name="Java 8/17/21" link="https://www.oracle.com/java/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Spring Boot" link="https://spring.io/projects/spring-boot/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Micronaut" link="https://micronaut.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="React 19" link="https://react.dev/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Angular Micro-Frontends" link="https://angular.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
+    <div class="text-lg font-bold uppercase tracking-wide">Professional Experience</div>
+    <hr class="border-gray-400 mb-3" />
 
-        <div class="text-2xl w-full font-bold mb-1">Cloud, Containers & CI/CD</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill
-            name="AWS"
-            link="https://aws.amazon.com/"
-            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
-            subSkills={[
-              { name: "Lambda", link: "https://aws.amazon.com/lambda/" },
-              { name: "ECS/Fargate", link: "https://aws.amazon.com/fargate/" },
-              { name: "RDS", link: "https://aws.amazon.com/rds/" },
-              { name: "S3", link: "https://aws.amazon.com/s3/" },
-              { name: "KMS", link: "https://aws.amazon.com/kms/" },
-            ]}
-          />
-          <Skill name="Docker" link="https://www.docker.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Kubernetes" link="https://kubernetes.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Jenkins" link="https://www.jenkins.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="CI/CD Automation" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-
-        <div class="text-2xl w-full font-bold mb-1">Data & Messaging</div>
-        <ul class="list-disc mx-6">
-          <Skill name="Oracle" link="https://www.oracle.com/database/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="PostgreSQL" link="https://www.postgresql.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="MySQL" link="https://www.mysql.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="DynamoDB" link="https://aws.amazon.com/dynamodb/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Kafka" link="https://kafka.apache.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="RabbitMQ" link="https://www.rabbitmq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="SQS/SNS" link="https://aws.amazon.com/sqs/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-      </div>
-      <div>
-        <div class="text-2xl w-full font-bold mb-1">Architecture & Security</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill name="Event-Driven & Serverless Architecture" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="OAuth 2.0" link="https://oauth.net/2/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="OIDC/SAML" link="https://openid.net/connect/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Keycloak" link="https://www.keycloak.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-
-        <div class="text-2xl w-full font-bold mb-1">Testing, Observability & Practices</div>
-        <ul class="list-disc mx-6">
-          <Skill name="JUnit 5" link="https://junit.org/junit5/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Mockito" link="https://site.mockito.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="TestContainers" link="https://testcontainers.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Datadog" link="https://www.datadoghq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Splunk Cloud" link="https://www.splunk.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Agile/Scrum, Kanban, Sprint Planning" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Professional Experience</div>
-    </div>
-
-    <div class="time-line-container mb-10">
+    <div class="mb-6">
       <Jobtitle
         title="Staff Software Consultant"
-        companyDescription="DNext — Client: STC (Saudi Telecommunications, BSS/OSS Federation)"
         companyName="DNext"
-        style="color: #4a4e91; text-decoration: none; border-bottom: 2px solid #4a4e91;"
-        fromDate="July/01/2026"
+        companyDescription=" — Client: STC (Saudi Telecommunications, BSS/OSS Federation)"
+        fromDate="Jul 2026"
         toDate="Present"
       >
-        <p class="text-sm italic mb-2">
+        <p class="italic mb-2">
           Tech: Java, Spring Boot, Apache Kafka, Avro (Confluent Schema Registry), Camunda 7 (BPMN),
           Keycloak, Angular, PostgreSQL, MongoDB, Docker
         </p>
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             STC's BSS/OSS synchronization engine federates product-catalog changes from the master
             product catalogue out to downstream systems — CPQ (Configure, Price, Quote), ECOM
@@ -148,20 +95,20 @@ import Skill from "../components/cv/Skill.astro";
           </li>
         </ul>
       </Jobtitle>
+
       <Jobtitle
         title="Staff Consultant Engineer"
-        companyDescription="10Pearls — Client: BILL.com (US Fintech, AP/AR Automation)"
         companyName="10Pearls"
         companyLink="https://www.10pearls.com/"
-        style="color: #a15c2f; text-decoration: none; border-bottom: 2px solid #a15c2f;"
-        fromDate="December/01/2025"
-        toDate="July/01/2026"
+        companyDescription=" — Client: BILL.com (US Fintech, AP/AR Automation)"
+        fromDate="Dec 2025"
+        toDate="Jul 2026"
       >
-        <p class="text-sm italic mb-2">
+        <p class="italic mb-2">
           Tech: Java 17+, Micronaut 4, Kafka, Flink, AWS (ECS/Fargate, RDS, S3, SQS/SNS, KMS),
           Angular/React 19, Docker, Datadog, Splunk Cloud
         </p>
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             Closed a gap where customers on BILL.com's Supplier Payments Plus were getting invoices but
             no email statements: designed and shipped an end-to-end notification pipeline using an
@@ -175,16 +122,20 @@ import Skill from "../components/cv/Skill.astro";
           </li>
         </ul>
       </Jobtitle>
+
       <Jobtitle
         title="Senior Software Engineer & Team Lead"
-        companyDescription="Global Rescue provides medical, security, intelligence, and crisis response services to corporations, governments and individuals"
-        companyName="Global Rescue"
+        companyName="Global Rescue LLC"
         companyLink="https://www.globalrescue.com/"
-        style="color: #722F37; text-decoration: none; border-bottom: 2px solid #722F37;"
-        fromDate="March/01/2022"
-        toDate="November/01/2025"
+        companyDescription=" (US SaaS — Travel Risk & Crisis Management)"
+        fromDate="Mar 2022"
+        toDate="Nov 2025"
       >
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <p class="italic mb-2">
+          Tech: Java 21, Spring Boot 3, Node.js, AWS (ECS, Lambda, API Gateway, DynamoDB, S3, SQS, SNS,
+          SES), MySQL, Redis, Elasticsearch, RabbitMQ, Keycloak, Datadog, TestContainers
+        </p>
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             When I joined, Global Rescue was running on an aging monolith that couldn't keep up with
             the business. Over 3.5 years, I spearheaded the GRID 2.0 revamp that broke it into
@@ -221,16 +172,19 @@ import Skill from "../components/cv/Skill.astro";
           </li>
         </ul>
       </Jobtitle>
+
       <Jobtitle
         title="Software Engineer"
         companyName="Stella Technologies"
-        companyDescription="Stella Technology, based in Silicon Valley, is a leading digital healthcare-only company."
         companyLink="https://stellatechnology.com/"
-        style="color: #287c6e; text-decoration: none; border-bottom: 2px solid #287c6e;"
-        fromDate="March/01/2021"
-        toDate="March/01/2022"
+        companyDescription=" (US Digital Healthcare — Silicon Valley)"
+        fromDate="Mar 2021"
+        toDate="Mar 2022"
       >
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <p class="italic mb-2">
+          Tech: Java, Spring Boot, Node.js, AWS Lambda, Step Functions, S3, PostgreSQL, Sequelize ORM
+        </p>
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             Stella had a healthcare platform that could talk to its own database but not to anyone
             else's. I engineered the HL7 & FHIR interoperability layer that opened it up to outside
@@ -247,16 +201,17 @@ import Skill from "../components/cv/Skill.astro";
           </li>
         </ul>
       </Jobtitle>
+
       <Jobtitle
         title="Software Engineer"
-        companyName="China Mobile Pakistan - Zong 4G"
-        companyDescription="Zong is a subsidiary of China Mobile in Pakistan & a leading telecome company with largest share of subscriber based in Pakistan."
+        companyName="Zong"
         companyLink="https://www.zong.com.pk/about-zong/china-mobile-pakistan/"
-        style="color: #567d30; text-decoration: none; border-bottom: 2px solid #567d30;"
-        fromDate="April/01/2020"
-        toDate="March/01/2021"
+        companyDescription=" — China Mobile Pakistan (Telecom), Islamabad"
+        fromDate="Apr 2020"
+        toDate="Mar 2021"
       >
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <p class="italic mb-2">Tech: Node.js, PostgreSQL, Sequelize ORM</p>
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             Took the AutoKiosk Machine from whiteboard to production for one of Pakistan's largest
             telecom providers. Owned planning, building, testing, and go-live.
@@ -270,14 +225,14 @@ import Skill from "../components/cv/Skill.astro";
 
       <Jobtitle
         title="Software Engineer"
-        companyName="Taj Digital Healthcare"
-        companyDescription="TAJ is a digital healthcare service available instantly, smart & personalised with a user experience that appeals to everyone and distributed efficiently with great customer services"
+        companyName="Infinium Digital"
         companyLink="https://www.tajdigitalhealth.com/"
-        style="color: #2a8988; text-decoration: none; border-bottom: 2px solid #2a8988;"
-        fromDate="July/01/2018"
-        toDate="March/01/2020"
+        companyDescription=" — TAJ Digital Healthcare, Islamabad"
+        fromDate="Jul 2018"
+        toDate="Mar 2020"
       >
-        <ul class="list-disc columns-1 md:columns-2 mx-6">
+        <p class="italic mb-2">Tech: Java, Spring Boot, MySQL, AWS (EC2, RDS), Jenkins, OAuth, REST APIs</p>
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
             Joined as a junior; left as the primary backend engineer. Built TAJ's digital healthcare
             platform from an MVP into a fully operational business within a year — the product that
@@ -295,30 +250,22 @@ import Skill from "../components/cv/Skill.astro";
       </Jobtitle>
     </div>
 
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Education</div>
-    </div>
-
-    <div class="time-line-container grid gap-4 mb-10">
+    <div class="text-lg font-bold uppercase tracking-wide">Education</div>
+    <hr class="border-gray-400 mb-3" />
+    <div class="mb-6">
       <TimeLineElement
-        title="Bachelor of Software Engineering"
-        subtitle="2014 to 2018 at Bahria University, Islamabad, Pakistan"
+        title="Bachelor of Software Engineering — Bahria University, Islamabad"
+        subtitle="2014 – 2018"
       />
     </div>
 
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Awards, Entrepreneurship & Additional</div>
-    </div>
-
-    <ul class="list-disc mx-6 mb-10">
-      <li class="mb-1 text-justify">
-        Winner, HEC Blockchain Hackathon 2018. 1st Place, Bahria University Open House 2018 (Engineering).
-      </li>
-      <li class="mb-1 text-justify">
-        Founded Pharmaconn (healthcare startup, won YES Competition).
-      </li>
-      <li class="mb-1 text-justify">Co-founded Porter ($20K pre-seed).</li>
-      <li class="mb-1 text-justify">English (Fluent), Urdu (Native).</li>
+    <div class="text-lg font-bold uppercase tracking-wide">Awards, Entrepreneurship & Additional</div>
+    <hr class="border-gray-400 mb-3" />
+    <ul class="list-disc mx-5 text-sm space-y-1">
+      <li>Winner, HEC Blockchain Hackathon 2018. 1st Place, Bahria University Open House 2018 (Engineering).</li>
+      <li>Founded Pharmaconn (healthcare startup, won YES Competition).</li>
+      <li>Co-founded Porter ($20K pre-seed).</li>
+      <li>English (Fluent), Urdu (Native).</li>
     </ul>
   </div>
 </BaseLayout>
