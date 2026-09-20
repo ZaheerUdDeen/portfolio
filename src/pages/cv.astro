@@ -17,8 +17,23 @@ import Skill from "../components/cv/Skill.astro";
   </div> -->
 
   <div>
+    <div class="mb-6 text-center">
+      <div class="text-4xl font-bold">Zaheer Ud Din</div>
+      <div class="text-xl opacity-80 mt-1">Staff Consultant Engineer</div>
+      <div class="text-sm opacity-70 mt-2">
+        +92-311-5076756 &nbsp;|&nbsp; zaheeru7@gmail.com &nbsp;|&nbsp; Islamabad, Pakistan
+      </div>
+      <div class="text-sm mt-1">
+        <a href="https://linkedin.com/in/zaheeru7" target="_blank" class="hover:underline">linkedin.com/in/zaheeru7</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/zaheeruddeen" target="_blank" class="hover:underline">github.com/zaheeruddeen</a>
+        &nbsp;|&nbsp;
+        <a href="https://zaheeruddeen.github.io/portfolio" target="_blank" class="hover:underline">zaheeruddeen.github.io/portfolio</a>
+      </div>
+    </div>
+
     <div class="mb-4" style="display: flex; justify-content: space-between; align-items: center;">
-      <div class="text-3xl font-bold">Profile</div>
+      <div class="text-3xl font-bold">Professional Summary</div>
       <a href="https://raw.githubusercontent.com/ZaheerUdDeen/portfolio/main/public/resume.pdf" download id="downloadButton">
         <i class="fas fa-download" style="font-size: 1.2em; cursor: pointer;"></i>
       </a>
@@ -35,7 +50,74 @@ import Skill from "../components/cv/Skill.astro";
     </div>
 
     <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Experience</div>
+      <div class="text-3xl w-full font-bold">Core Competencies</div>
+    </div>
+
+    <div class="mb-10 grid md:grid-cols-2 gap-x-6">
+      <div>
+        <div class="text-2xl w-full font-bold mb-1">Languages, Frameworks & Frontend</div>
+        <ul class="list-disc mx-6 mb-4">
+          <Skill name="Java 8/17/21" link="https://www.oracle.com/java/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Spring Boot" link="https://spring.io/projects/spring-boot/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Micronaut" link="https://micronaut.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="React 19" link="https://react.dev/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Angular Micro-Frontends" link="https://angular.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+        </ul>
+
+        <div class="text-2xl w-full font-bold mb-1">Cloud, Containers & CI/CD</div>
+        <ul class="list-disc mx-6 mb-4">
+          <Skill
+            name="AWS"
+            link="https://aws.amazon.com/"
+            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
+            subSkills={[
+              { name: "Lambda", link: "https://aws.amazon.com/lambda/" },
+              { name: "ECS/Fargate", link: "https://aws.amazon.com/fargate/" },
+              { name: "RDS", link: "https://aws.amazon.com/rds/" },
+              { name: "S3", link: "https://aws.amazon.com/s3/" },
+              { name: "KMS", link: "https://aws.amazon.com/kms/" },
+            ]}
+          />
+          <Skill name="Docker" link="https://www.docker.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Kubernetes" link="https://kubernetes.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Jenkins" link="https://www.jenkins.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="CI/CD Automation" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+        </ul>
+
+        <div class="text-2xl w-full font-bold mb-1">Data & Messaging</div>
+        <ul class="list-disc mx-6">
+          <Skill name="Oracle" link="https://www.oracle.com/database/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="PostgreSQL" link="https://www.postgresql.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="MySQL" link="https://www.mysql.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="DynamoDB" link="https://aws.amazon.com/dynamodb/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Kafka" link="https://kafka.apache.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="RabbitMQ" link="https://www.rabbitmq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="SQS/SNS" link="https://aws.amazon.com/sqs/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+        </ul>
+      </div>
+      <div>
+        <div class="text-2xl w-full font-bold mb-1">Architecture & Security</div>
+        <ul class="list-disc mx-6 mb-4">
+          <Skill name="Event-Driven & Serverless Architecture" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="OAuth 2.0" link="https://oauth.net/2/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="OIDC/SAML" link="https://openid.net/connect/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Keycloak" link="https://www.keycloak.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+        </ul>
+
+        <div class="text-2xl w-full font-bold mb-1">Testing, Observability & Practices</div>
+        <ul class="list-disc mx-6">
+          <Skill name="JUnit 5" link="https://junit.org/junit5/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Mockito" link="https://site.mockito.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="TestContainers" link="https://testcontainers.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Datadog" link="https://www.datadoghq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Splunk Cloud" link="https://www.splunk.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+          <Skill name="Agile/Scrum, Kanban, Sprint Planning" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
+        </ul>
+      </div>
+    </div>
+
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Professional Experience</div>
     </div>
 
     <div class="time-line-container mb-10">
@@ -211,70 +293,6 @@ import Skill from "../components/cv/Skill.astro";
           </li>
         </ul>
       </Jobtitle>
-    </div>
-
-
-    <div class="mb-10 grid md:grid-cols-2 gap-x-6">
-      <div>
-        <div class="text-2xl w-full font-bold mb-1">Languages, Frameworks & Frontend</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill name="Java 8/17/21" link="https://www.oracle.com/java/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Spring Boot" link="https://spring.io/projects/spring-boot/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Micronaut" link="https://micronaut.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="React 19" link="https://react.dev/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Angular Micro-Frontends" link="https://angular.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-
-        <div class="text-2xl w-full font-bold mb-1">Cloud, Containers & CI/CD</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill
-            name="AWS"
-            link="https://aws.amazon.com/"
-            style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;"
-            subSkills={[
-              { name: "Lambda", link: "https://aws.amazon.com/lambda/" },
-              { name: "ECS/Fargate", link: "https://aws.amazon.com/fargate/" },
-              { name: "RDS", link: "https://aws.amazon.com/rds/" },
-              { name: "S3", link: "https://aws.amazon.com/s3/" },
-              { name: "KMS", link: "https://aws.amazon.com/kms/" },
-            ]}
-          />
-          <Skill name="Docker" link="https://www.docker.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Kubernetes" link="https://kubernetes.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Jenkins" link="https://www.jenkins.io/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="CI/CD Automation" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-
-        <div class="text-2xl w-full font-bold mb-1">Data & Messaging</div>
-        <ul class="list-disc mx-6">
-          <Skill name="Oracle" link="https://www.oracle.com/database/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="PostgreSQL" link="https://www.postgresql.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="MySQL" link="https://www.mysql.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="DynamoDB" link="https://aws.amazon.com/dynamodb/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Kafka" link="https://kafka.apache.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="RabbitMQ" link="https://www.rabbitmq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="SQS/SNS" link="https://aws.amazon.com/sqs/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-      </div>
-      <div>
-        <div class="text-2xl w-full font-bold mb-1">Architecture & Security</div>
-        <ul class="list-disc mx-6 mb-4">
-          <Skill name="Event-Driven & Serverless Architecture" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="OAuth 2.0" link="https://oauth.net/2/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="OIDC/SAML" link="https://openid.net/connect/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Keycloak" link="https://www.keycloak.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-
-        <div class="text-2xl w-full font-bold mb-1">Testing, Observability & Practices</div>
-        <ul class="list-disc mx-6">
-          <Skill name="JUnit 5" link="https://junit.org/junit5/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Mockito" link="https://site.mockito.org/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="TestContainers" link="https://testcontainers.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Datadog" link="https://www.datadoghq.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Splunk Cloud" link="https://www.splunk.com/" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-          <Skill name="Agile/Scrum, Kanban, Sprint Planning" style="color: #232F3E; text-decoration: none; border-bottom: 2px solid #232F3E;" />
-        </ul>
-      </div>
     </div>
 
     <div class="mb-5">
