@@ -5,29 +5,38 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
 ---
 
 <BaseLayout title="Resume">
-  <div class="bg-white text-gray-900 font-serif shadow-xl rounded-md mx-auto max-w-[850px] p-6 sm:p-10">
+  <div class="relative bg-white text-gray-900 font-serif shadow-xl rounded-md mx-auto max-w-[850px] p-6 sm:p-10">
+    <a
+      href="https://raw.githubusercontent.com/ZaheerUdDeen/portfolio/main/public/resume.pdf"
+      download
+      id="downloadButton"
+      title="Download PDF"
+      class="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-500 hover:text-gray-800"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/></svg>
+    </a>
+
     <div class="text-center mb-4">
       <div class="text-3xl font-bold">Zaheer Ud Din</div>
       <div class="text-lg text-gray-700">Staff Consultant Engineer</div>
-      <div class="text-sm text-gray-600 mt-1">
-        +92-311-5076756 &nbsp;|&nbsp; zaheeru7@gmail.com &nbsp;|&nbsp; Islamabad, Pakistan
+      <div class="text-sm text-gray-600 mt-1 flex flex-wrap items-baseline justify-center gap-x-2">
+        <span>+92-311-5076756</span>
+        <span>|</span>
+        <span>zaheeru7@gmail.com</span>
+        <span>|</span>
+        <span>Islamabad, Pakistan</span>
       </div>
-      <div class="text-sm mt-1">
+      <div class="text-sm mt-1 flex flex-wrap items-baseline justify-center gap-x-2">
         <a href="https://linkedin.com/in/zaheeru7" target="_blank" class="text-blue-700 hover:underline">linkedin.com/in/zaheeru7</a>
-        &nbsp;|&nbsp;
+        <span>|</span>
         <a href="https://github.com/zaheeruddeen" target="_blank" class="text-blue-700 hover:underline">github.com/zaheeruddeen</a>
-        &nbsp;|&nbsp;
+        <span>|</span>
         <a href="https://zaheeruddeen.github.io/portfolio" target="_blank" class="text-blue-700 hover:underline">zaheeruddeen.github.io/portfolio</a>
       </div>
     </div>
     <hr class="border-gray-400 mb-5" />
 
-    <div class="mb-1 flex items-center justify-between">
-      <div class="text-lg font-bold uppercase tracking-wide">Professional Summary</div>
-      <a href="https://raw.githubusercontent.com/ZaheerUdDeen/portfolio/main/public/resume.pdf" download id="downloadButton" title="Download PDF" class="text-gray-500 hover:text-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 16l-6-6h4V4h4v6h4l-6 6zm-7 2h14v2H5v-2z"/></svg>
-      </a>
-    </div>
+    <div class="text-lg font-bold uppercase tracking-wide">Professional Summary</div>
     <hr class="border-gray-400 mb-3" />
     <div class="text-sm text-justify mb-6">
       I'm the engineer teams bring in when the system that "works fine" starts cracking under real use.
