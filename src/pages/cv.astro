@@ -18,7 +18,7 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
 
     <div class="text-center mb-4">
       <div class="text-3xl font-bold">Zaheer Ud Din</div>
-      <div class="text-lg text-gray-700">Staff Consultant Engineer</div>
+      <div class="text-lg text-gray-700">Staff Consultant Engineer · AI-Native Software Engineering</div>
       <div class="text-sm text-gray-600 mt-1 flex flex-wrap items-baseline justify-center gap-x-2">
         <span>+92-311-5076756</span>
         <span>|</span>
@@ -39,22 +39,36 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
     <div class="text-lg font-bold uppercase tracking-wide">Professional Summary</div>
     <hr class="border-gray-400 mb-3" />
     <div class="text-sm text-justify mb-6">
-      I'm the engineer teams bring in when the system that "works fine" starts cracking under real use.
-      I'm also who they call when the monolith everyone's afraid to touch needs to become something the
-      business can actually grow on. I've spent 8+ years doing exactly that. Most recently, I've been
-      federating product-catalog and identity events across STC's OSS/BSS systems at DNext. Before that,
-      I turned a manual billing process at BILL.com into a fully automated, zero-loss delivery system. I
-      also led the platform revamp at Global Rescue that Fast Company recognized as one of the most
-      innovative products of 2024. I lead small teams, ship production systems that other teams end up
-      depending on, and make sure the engineers around me are shipping better too.
+      AI-native staff engineer with 8+ years shipping production systems. I build with Claude Code and
+      Cursor every day, and I build AI into the products themselves: agentic LLM workflows with tool
+      calling (MCP), guardrails, evals and human-in-the-loop review. At DNext (client: STC) I built an
+      agent that converts arbitrary Excel product catalogues into STC's template format, alongside
+      the Kafka/Camunda engine that federates catalog and identity events across OSS/BSS systems.
+      Earlier, I automated BILL.com billing end to end and
+      led the Global Rescue platform revamp that Fast Company recognized as one of 2024's most
+      innovative products. Outside work, I run PerFinAI, an AI-native finance assistant that is
+      largely built and maintained by agents inside a harness I designed. I lead small teams, ship
+      systems other teams depend on, and make the engineers around me faster.
     </div>
 
     <div class="text-lg font-bold uppercase tracking-wide">Core Competencies</div>
     <hr class="border-gray-400 mb-3" />
     <ul class="list-disc mx-5 text-sm space-y-1 mb-6">
       <li>
+        <span class="font-bold">AI-Assisted Engineering:</span>
+        Claude Code (CLAUDE.md context hierarchy, custom skills &amp; slash commands, subagents, hooks,
+        permission guardrails, worktree-parallel agents), Cursor (agent mode, rules), spec-first / test-first
+        agent loops, fresh-context AI code review, ADR-driven decisions
+      </li>
+      <li>
+        <span class="font-bold">Applied AI &amp; Agents:</span>
+        LLM agents &amp; agentic workflows, tool calling &amp; MCP, Anthropic API &amp; Claude Agent SDK,
+        schema-forced structured outputs, RAG (embeddings, vector search), prompt engineering,
+        golden-dataset evals, guardrails, human-in-the-loop, LLM cost governance, OpenTelemetry tracing
+      </li>
+      <li>
         <span class="font-bold">Languages, Frameworks & Frontend:</span>
-        Java 8/17/21, Spring Boot, Micronaut, React 19, Angular Micro-Frontends
+        Java 8/17/21/25, Spring Boot, Micronaut, TypeScript/Node.js, Python/FastAPI, React 19, Angular Micro-Frontends
       </li>
       <li>
         <span class="font-bold">Cloud, Containers & CI/CD:</span>
@@ -62,7 +76,7 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
       </li>
       <li>
         <span class="font-bold">Data & Messaging:</span>
-        Oracle, PostgreSQL, MySQL, DynamoDB, Kafka, RabbitMQ, SQS/SNS
+        Oracle, PostgreSQL, MySQL, MongoDB, DynamoDB, Kafka, RabbitMQ, SQS/SNS
       </li>
       <li>
         <span class="font-bold">Architecture & Security:</span>
@@ -87,7 +101,7 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
       >
         <p class="italic mb-2">
           Tech: Java, Spring Boot, Apache Kafka, Avro (Confluent Schema Registry), Camunda 7 (BPMN),
-          Keycloak, Angular, PostgreSQL, MongoDB, Docker
+          Keycloak, Angular, PostgreSQL, MongoDB, Docker, TypeScript/Node.js, LLM Agents (MCP)
         </p>
         <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
@@ -101,6 +115,17 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
             event-group processing, and added Avro-schema Kafka topic integration for user onboarding
             and role-assignment events, extending the existing publish/listener flow to carry identity
             and access-lifecycle events through the same federation pipeline.
+          </li>
+        <li class="mb-1 text-justify">
+            Built an agentic LLM workflow (TypeScript/Node.js, tool calling via MCP) that converts
+            arbitrary Excel product catalogues into STC's UPT template format, with validation in the
+            loop, bounded retries, guardrails against invented data, and a human-in-the-loop review
+            manifest.
+          </li>
+          <li class="mb-1 text-justify">
+            Built the UPT validation service (Java 25, Spring Boot 4, MongoDB, JSLT): rule-based
+            validation of catalogue payloads against product definitions, with configurable
+            exceptions, bulk runs and audit history.
           </li>
         </ul>
       </Jobtitle>
@@ -153,31 +178,24 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
             we rebuilt.
           </li>
           <li class="mb-1 text-justify">
-            Led a team of 6 engineers. My job wasn't just assigning tickets — it was setting
-            architectural direction, running design reviews, mentoring mid-level engineers into senior
-            roles, and being the bridge between US-based product leadership and our distributed
-            engineering team.
+            Led a team of 6 engineers. I set architectural direction, ran
+            design reviews, mentored mid-level engineers into senior roles, and bridged US product
+            leadership and our distributed team.
           </li>
           <li class="mb-1 text-justify">
-            The company had three separate authentication flows that nobody fully understood. I
-            consolidated them into a single identity layer — OAuth 2.0 + OIDC via Keycloak with custom
+            I consolidated three separate authentication flows into a single identity layer — OAuth 2.0 + OIDC via Keycloak with custom
             SSO support, API Gateway integration, and backward compatibility through dynamic proxies.
             One system instead of three.
           </li>
           <li class="mb-1 text-justify">
             Built the internal platform libraries that other teams now depend on: an auth SDK, a
             circuit-breaker messaging layer, and a unified notification service for email, push, and
-            SMS. It's the kind of quiet infrastructure that prevents outages and saves every team weeks
-            of reinventing the wheel.
+            SMS.
           </li>
           <li class="mb-1 text-justify">
             Created a custom monitoring system for the company's most critical API (SOS emergency
-            calls). If that endpoint goes down, lives are at risk. My integration-testing framework
-            with synthetic monitoring caught regressions before they ever hit production.
-          </li>
-          <li class="mb-1 text-justify">
-            Defined the API contracts that let front-end teams (React and Angular) build in parallel
-            with backend — cutting the integration phase from weeks to days.
+            calls). My integration-testing framework
+            with synthetic monitoring caught regressions before they hit production.
           </li>
         </ul>
       </Jobtitle>
@@ -204,10 +222,6 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
             Functions. Data latency dropped from hours to near real time, and the on-call team stopped
             getting paged for pipeline failures.
           </li>
-          <li class="mb-1 text-justify">
-            Introduced testing discipline where there was none: coverage gates, test-first culture, and
-            a safety net that let us refactor aggressively without breaking things.
-          </li>
         </ul>
       </Jobtitle>
 
@@ -224,10 +238,6 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
           <li class="mb-1 text-justify">
             Took the AutoKiosk Machine from whiteboard to production for one of Pakistan's largest
             telecom providers. Owned planning, building, testing, and go-live.
-          </li>
-          <li class="mb-1 text-justify">
-            Shipped features for MyZong (millions of subscribers) while navigating tight sprints and
-            cross-cultural collaboration with Chinese vendor teams.
           </li>
         </ul>
       </Jobtitle>
@@ -251,9 +261,36 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
             Designed a referral engine that went viral on launch day: 10,000+ downloads in the first
             release, becoming the product's main growth channel before any paid marketing.
           </li>
+        </ul>
+      </Jobtitle>
+    </div>
+
+    <div class="text-lg font-bold uppercase tracking-wide">AI Projects</div>
+    <hr class="border-gray-400 mb-3" />
+    <div class="mb-6">
+      <Jobtitle
+        title="PerFinAI — AI-Native Personal Finance Assistant"
+        companyName="Personal project"
+        companyDescription=" — agent-built and agent-maintained with Claude Code"
+        fromDate="Feb 2026"
+        toDate="Present"
+      >
+        <p class="italic mb-2">
+          Tech: Python, FastAPI, Anthropic API, Claude Agent SDK, Claude Code, SQLAlchemy, PostgreSQL,
+          React, OpenTelemetry
+        </p>
+        <ul class="list-disc mx-5">
           <li class="mb-1 text-justify">
-            Connected Total Care Saudi, insurance companies, pharmacies, and labs into a multi-tenant
-            partner ecosystem for online medicine and lab ordering.
+            Designed a Claude Code development harness so agents do most of the building: a manifest-driven
+            module map, a slim CLAUDE.md hierarchy, custom skills (/run-evals, /deliver, /orchestrate,
+            /new-adr), planner and fresh-context verifier subagents, and hooks that block writes to
+            protected paths and gate completion on tests.
+          </li>
+          <li class="mb-1 text-justify">
+            Built the product on an LLM agent loop with schema-forced tool use, retrieval over embeddings,
+            LLM-first categorization with learned exemplars, and agent-authored, self-tested PDF statement
+            parsers, all gated by golden-dataset evals, with tenant isolation, LLM cost controls, human
+            confirmation before writes, and 70+ architecture decision records.
           </li>
         </ul>
       </Jobtitle>
@@ -271,10 +308,8 @@ import Jobtitle from "../components/cv/Jobtitle.astro";
     <div class="text-lg font-bold uppercase tracking-wide">Awards, Entrepreneurship & Additional</div>
     <hr class="border-gray-400 mb-3" />
     <ul class="list-disc mx-5 text-sm space-y-1">
-      <li>Winner, HEC Blockchain Hackathon 2018. 1st Place, Bahria University Open House 2018 (Engineering).</li>
-      <li>Founded Pharmaconn (healthcare startup, won YES Competition).</li>
-      <li>Co-founded Porter ($20K pre-seed).</li>
-      <li>English (Fluent), Urdu (Native).</li>
+      <li>Winner, HEC Blockchain Hackathon 2018; 1st Place, Bahria Open House 2018.</li>
+      <li>Founded Pharmaconn (healthcare startup, won YES Competition). Co-founded Porter ($20K pre-seed). English, Urdu.</li>
     </ul>
   </div>
 </BaseLayout>
